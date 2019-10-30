@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="user-scalable=no, width=device-width height=device-height initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>App</title>
+
+  <access origin="api.yourservice.tld" subdomains="false"></access>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+  <link rel="stylesheet" href="index.css" />
+  <script src="js/app.js"></script>
+
+</head>
+
+<body ng-app="app" ng-controller="AppCtrl">
+  <div class='jumbotron'>
+    <h4> {{app}} </h4>
+    <table class='table'>
+      <tr>
+        <th> Temperatura em Celsius </th>
+      </tr>
+      <tr>
+        <td> {{temC }} </td>
+      </tr>
+    </table>
+    <hr />
+    <input type='number' ng-model='valor.temF' placeholder="Digite a temperatura" />
+    <button class='btn' ng-click='calcular(valor)'> Executar </button>
+  </div>
+</body>
+
+</html>
